@@ -4,59 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Clock</title>
 </head>
 <body>
-    <style>
-        body{
-            background: wheat;
-        }
-        .clock{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 900;
-            font-size: 100px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%)
-        }
-
-    </style>
     <div id="root" class="clock"></div>
-    <script type="text/javascript">
-        function timeNow(){
-        let date = new Date()
-        let h = date.getHours()
-        let m = date.getMinutes()
-        let s = date.getSeconds()
-        let session = "AM"
-            // if (h == 0) {
-            //     h = 12;
-            // }
-            // if (h > 12) {
-            //     h = h - 12
-            //     session = "PM"
-            // }
-            // if(h < 10) {
-            //     h = "0" + h
-            // }
-            // if (m < 10) {
-            //     m = "0" + m
-            // }
-            // if(s < 10) {
-            //     s = "0" + s
-            // }
-            h = (h < 10) ? "0" + h : h
-            m = (m < 10) ? "0" + m : m
-            s = (s < 10) ? "0" + s : s
-
-      document.getElementById("root").innerHTML = `${h} : ${m} : ${s} ${session}`
-      setTimeout(timeNow, 1000)
-      }
-      
-
-
-      timeNow();
+    <script type="text/javascript" src="app.js">
+       
     </script>
 </body>
 </html>
